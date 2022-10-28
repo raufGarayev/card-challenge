@@ -1,6 +1,6 @@
 const theForm = document.querySelector('form')
 const inputs = document.querySelectorAll('input')
-const sixdigs = document.querySelector('.sexteen-digits')
+const sixdigs = document.querySelector('.sixteen-digits')
 const nameDate = document.querySelector('.card-front_name-date')
 const cvv = document.querySelector('.cvv-text')
 
