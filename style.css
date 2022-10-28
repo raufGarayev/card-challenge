@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+    height: 100vh;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    position: relative;
+}
+
+.left-side {
+    width: 30%;
+    height: 100%;
+    background: rgb(33,8,47);
+    background: linear-gradient(90deg, rgba(33,8,47,1) 0%, rgba(62,37,50,1) 100%, rgba(255,255,255,1) 100%, rgba(255,249,255,1) 100%);
+}
+
+.card-front {
+    width: 375px;
+    background-color: hsl(278, 68%, 11%);
+    height: 200px;
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    border-radius: 10px;
+    
+}
+
+.card-back {
+    width: 375px;
+    background-color: #f3eded;
+    height: 200px;
+    border-radius: 10px;
+    position: absolute;
+    top: 57%;
+    left: 17%;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sexteen-digits {
+    position: absolute;
+    color: #fff;
+    top: 60%;
+    left: 10%;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.card-front p span {
+    padding-left: 10px;
+    letter-spacing: 5px;
+}
+
+.card-front_name-date {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    top: 80%;
+    left: 13%;
+    padding-right: 80px;
+}
+
+.card-front_name-date p {
+    color: #fff;
+    font-size: 12px;
+    font-weight: 100;
+}
+
+.card-back_blackline {
+    height: 50px;
+    width: 100%;
+    background-color: rgba(0,0,0,.8);
+}
+
+.card-back_cvv {
+    width: 80%;
+    height: 35px;
+    background-color: hsl(270, 4%, 82%);
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 15px;
+    color: #fff;
+}
+
+.cvv-text {
+    letter-spacing: 3px;
+}
+
+.right-side {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form div:not(:nth-child(3)) {
+    display: flex;
+    flex-direction: column;
+}
+
+form div:not(.nums) {
+    padding-top: 10px;
+}
+
+input {
+    margin-top: 7px;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid #dedede;
+    padding: 10px 15px;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button
+{ 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+#name,
+#digits {
+    width: 400px;
+}
+
+#exp-date-y, #exp-date-m {
+    width: 65px;
+}
+
+.date-cvc {
+    display: flex;
+    width: 400px;
+    justify-content: space-between;
+}
+
+.exp-date div {
+    flex-direction: row !important;
+    justify-content: space-between;
+}
+
+button {
+    width: 400px;
+    border-radius: 10px;
+    background: rgb(33,8,47);
+    color:#fff;
+    padding: 10px 0;
+    margin-top: 25px;
+    cursor: pointer;
+}
+
+button:active {
+    transform: scale(0.99);
+}

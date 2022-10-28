@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="left-side">
+
+        </div>
+
+        <div class="right-side">
+            <form class="form">
+                <div>
+                    <label for="name">CARDHOLDER NAME</label>
+                    <input name="name" id="name" type="text" placeholder="e.g Rauf Garayev">
+                </div>
+                <div>
+                    <label for="digits">CARD NUMBER</label>
+                    <input name="digits" id="digits" type="text" pattern="\d*" maxlength="16" placeholder="e.g 1234 5678 9123 0000">
+                </div>
+                <div class="date-cvc">
+                    <div class="exp-date">
+                        <label for="exp-date">EXP. DATE (MM/YY)</label>
+                        <div class="nums">
+                            <input name="exp-date" pattern="\d*" maxlength="2" id="exp-date-m" type="text" placeholder="MM">
+                            <input name="exp-date" id="exp-date-y" pattern="\d*" maxlength="2" type="text" placeholder="YY">
+                        </div>
+
+                    </div>
+                    <div class="cvc">
+                        <label0 for="cvc">CVC</label0>
+                        <input name="cvc" id="cvc" pattern="\d*" maxlength="3" type="text" placeholder="e.g 123">
+                    </div>
+
+                </div>
+
+                <button type="submit">Confirm</button>
+            </form>
+        </div>
+
+        <div class="card-front">
+            <p class="sexteen-digits"><span class="first">0000</span><span class="second">0000</span><span class="third">0000</span><span class="fourth">0000</span></p>
+
+            <div class="card-front_name-date">
+                <p>RAUF GARAYEV</p>
+                <p><span>00</span>/<span>00</span></p>
+            </div>
+        </div>
+        <div class="card-back">
+            <div class="card-back_blackline">
+
+            </div>
+            <div class="card-back_cvv">
+                <p class="cvv-text">000</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
